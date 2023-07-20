@@ -1,0 +1,19 @@
+// on hover animation only for wide screens because scaling causes some weird rescaling of body
+@media screen and (min-width: 45em) {
+    .fieldset__input {
+        transition: transform 0.3s ease;
+    }
+    
+    .fieldset__input:hover {
+        transform: scale(1.05);
+    }
+    
+    .textarea {
+        transition: transform 0.3s ease;
+    }
+    
+    .textarea:hover {
+        transform: scale(1.01);
+    }
+}
+

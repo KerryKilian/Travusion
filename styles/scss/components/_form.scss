@@ -1,0 +1,50 @@
+@use "../_tools.scss" as tools;
+
+// override user agent style
+.fieldset {
+    margin: 0;
+    padding: var(--padding);
+}
+
+.fieldset__question {
+    margin: var(--margin);
+    @include tools.flex(row wrap space-between center);
+} 
+
+.fieldset__label {
+    text-align: center;
+    margin: var(--margin);
+    flex: 0 0 3em; // every input the same size
+}
+
+.fieldset__input {
+    flex: 1 0.5 15em; // every input the same size
+    padding: var(--padding);
+    border: none;
+    min-width: 70%; // without this type=data won't wrap
+    max-width: 100%;
+}
+
+.textarea {
+    margin: var(--margin);
+    resize: none;
+    border: none;
+    width: calc(100% - 2 * var(--margin));
+}
+
+.fieldset__buttoncontainer {
+    padding: calc(var(--margin) * 2);
+}
+
+.send {
+    background-color: var(--accept-color);
+}
+
+.cancel {
+    background-color: var(--decline-color);
+    color: var(--white-color);
+}
+
+.result {
+    padding: var(--padding);
+}

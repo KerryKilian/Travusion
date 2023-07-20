@@ -1,0 +1,44 @@
+$start: 1;
+$end: 6;
+
+// every item has an animation after each other
+@for $i from $start through $end {
+    .offer:nth-child(#{$i}) .offer__caption {
+      animation-delay: $i * 1s;
+    }
+}
+  
+.offer__caption {
+    animation: pulse 6s infinite;
+}
+
+@keyframes pulse {
+    from {
+      transform: scale(1) rotate(45deg);
+    }
+    16.667% {
+      transform: scale(1.3) rotate(45deg);
+    }
+    33.333% {
+      transform: scale(1) rotate(45deg);
+    }
+}
+  
+
+// apearance on scrolling
+@for $i from $start through $end {
+  .offer:nth-child(#{$i}) {
+    transition-delay: $i * 0.3s;
+  }
+}
+
+.offer {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: all 1s;
+}
+
+.loadVisible {
+  opacity: 1;
+  transform: translateY(0%);
+}

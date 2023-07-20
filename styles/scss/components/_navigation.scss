@@ -1,0 +1,31 @@
+@use "../_tools.scss" as tools;
+
+
+// navigation fixed on wide screens
+.navigation {
+  @media (min-width: 45em) {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.navigation {
+  background: var(--tertiary-color);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  width: 100%;
+}
+
+.navigation__ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navigation__li {
+  padding: var(--padding);
+  margin: var(--margin);
+}

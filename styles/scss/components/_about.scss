@@ -1,0 +1,24 @@
+@use "../_tools.scss" as tools;
+
+.about {
+  padding: var(--padding);
+}
+
+.about__p {
+  max-width: 90%;
+  margin: var(--margin);
+}
+
+.about__figure {
+   margin: 0; // override user agent stylesheet
+  @include tools.flex(column wrap center center);
+  text-align: center;
+  margin: var(--margin);
+}
+
+.about__img {
+  width: var(--img-width);
+    max-width: 100%;
+    height: var(--img-height); 
+    object-fit: cover;
+}

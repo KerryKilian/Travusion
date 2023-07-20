@@ -1,0 +1,11 @@
+// navigation item scales bigger and background color changes
+.navigation__li {
+    background-color: var(--tertiary-color);
+    transform: scale(1.0);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation__li:hover {
+    transform: scale(1.2);
+    background-color: var(--main-color);
+  }

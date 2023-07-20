@@ -1,0 +1,58 @@
+@use "../_tools.scss" as tools;
+
+.types__img {
+  width: var(--img-width);
+  max-width: 100%;
+  height: var(--img-height);
+  object-fit: cover;
+}
+
+.types__article {
+  flex: 0.5 0.5 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  margin: var(--margin) var(--margin) 10% var(--margin)
+}
+
+.types__container {
+  padding: calc(var(--padding));
+  @include tools.flex(row wrap center center);
+  justify-content: center;
+}
+
+.types__p {
+  max-width: 100%;
+  text-align: left;
+}
+
+// on small screens no animation
+.types__articlecontainer {
+  @include tools.flex(column wrap center center);
+  text-align: center;
+}
+
+.types__figure {
+  margin: 0;
+  @include tools.flex(column wrap center center);
+}
+
+// for wide screens with animation
+@media screen and (min-width: 45em) {
+  .types__container {
+    padding: calc(var(--padding) * 6);
+  }
+
+  .types__articlecontainer {
+    position: relative;
+    @include tools.flex(column wrap center center);
+  }
+
+  .types__p {
+    position: absolute;
+    bottom: 0;
+    width: 30rem;
+  }  
+}

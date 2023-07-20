@@ -1,0 +1,7 @@
+.button {
+    margin: var(--margin);
+    max-width: var(--max-button-width);
+    max-height: var(--max-button-height);
+    padding: calc(var(--padding) * 1.5);
+    border: none;
+}

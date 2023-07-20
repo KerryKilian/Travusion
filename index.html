@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <title>Travusion</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Diyar Aslan, Kilian Brinkner" >
+    <link rel="stylesheet" href="css/styles.css" >
+    <script src="scripts/animation.js" defer></script>
+  </head>
+  <body>
+    
+      <nav class="navigation rounded">
+        <ul class="navigation__ul">
+          <li class="navigation__li rounded"><a class="navigation__a"  href="#where">Wohin?</a></li>
+          <li class="navigation__li rounded"><a class="navigation__a"  href="#types">Möglichkeiten</a></li>
+          <li class="navigation__li rounded"><a class="navigation__a"  href="#offers">Angebote</a></li>
+          <li class="navigation__li rounded"><a class="navigation__a"  href="#about">Über uns</a></li>
+          <li class="navigation__li rounded"><a class="navigation__a"  href="#appointment">Reiseberatung</a></li>
+        </ul>
+      </nav>
+      <div class="title row">
+        <h1 class="title__h1">Travusion</h1>
+        <figure class="title__figure figure">
+          <img class="" src="images/logo.png" alt="Logo">
+        </figure>
+      </div>
+    <main class="main">
+        <article id="where">
+            <h2>Wie soll dein nächster Urlaub aussehen?</h2>
+            <form action="form.html" method="POST" class="articlecontent rounded">
+              <fieldset class="fieldset rounded grid">
+                <div class="fieldset__question">
+              <label class="fieldset__label" for="start-date">Start</label>
+              <input class="fieldset__input rounded"
+                placeholder="28/07/2023"
+                type="date"
+                id="start-date"
+                name="start-date"
+                required
+              >
+            </div>
+            <div class="fieldset__question">
+              <label class="fieldset__label" for="end-date">Ende</label>
+              <input class="fieldset__input rounded"
+                placeholder="29/07/2023"
+                type="date"
+                id="end-date"
+                name="end-date"
+                required
+              >
+            </div>
+            <div class="fieldset__question">
+              <label class="fieldset__label" for="location">Ort</label>
+              <input class="fieldset__input rounded"
+                placeholder="London"
+                type="text"
+                id="location"
+                name="location"
+                required
+              >
+            </div>
+            
+            </fieldset>
+            <div class="fieldset__buttoncontainer">
+              <input class="button send rounded" type="submit" id="save-search">
+              <input class="button cancel rounded" type="reset">
+            </div>
+            <div class="result" id="result-search"></div>
+          </form>
+        </article>
+        <article id="types">
+          <h2>Diese Reisen erwarten dich</h2>
+          <div class="types__container articlecontent rounded">
+          <article class="types__article">
+            <h3>Erholung</h3>
+            <div class="types__articlecontainer">
+            <figure class="types__figure figure">
+              <div class="imagecontainer">
+              <img class="types__img rounded" src="images/erholung.jpg" alt="Erholungsurlaub">
+            </div>
+              <figcaption class="figcaption">© Sean Oulashin</figcaption>
+            </figure>
+            <p class="types__p">Erhole dich und finde innere Ruhe in einem maßgeschneiderten Erholungsurlaub. 
+              Unsere Reiseagentur bietet dir die perfekte Auszeit vom Alltag. Genieße unberührte Natur, entspannende 
+              Aktivitäten und erstklassige Unterkünfte. Buche jetzt und erlebe pure Entspannung.</p>
+          </div>
+          </article>
+        
+          <article class="types__article">
+            <h3>Wandern</h3>
+           <div class="types__articlecontainer">
+            <figure class="types__figure figure">
+              <div class="imagecontainer">
+              <img class="types__img image rounded" src="images/wandern.jpg" alt="Wanderurlaub">
+            </div>
+              <figcaption class="figcaption">© Toomas Tartes</figcaption>
+            </figure>
+            <p class="types__p">Hotelurlaub ist nichts für dich und du brauchst in deinem Urlaub Bewegung? Dann buche bei uns deine
+              Traumwanderung. Egal, ob Berge oder Wälder, egal, ob Jung oder Alt, Erfahren oder Anfänger. Mit uns
+              findest du deinen passenden Wanderurlaub.
+            </p>
+          </div> 
+          </article>
+          <article class="types__article">
+            <h3>Abenteuer</h3>
+            <div class="types__articlecontainer">
+            <figure class="types__figure figure">
+              <div class="imagecontainer">
+              <img class="types__img rounded" src="images/abenteuer.jpg" alt="Abenteuerurlaub">
+            </div>
+              <figcaption class="figcaption">© Tomas Sobek</figcaption>
+            </figure>
+            <p class="types__p">Erlebe den ultimativen Adrenalinkick und unvergessliche Abenteuer in unserem actiongeladenen Abenteuerurlaub! 
+              Tauche ein in aufregende Aktivitäten, erkunde atemberaubende Landschaften und spüre den Nervenkitzel. Buche jetzt und erlebe Abenteuer pur
+            </p>
+          </div>
+          </article>
+          <article class="types__article">
+            <h3>Sprachreise</h3>
+            <div class="types__articlecontainer">
+            <figure class="types__figure figure">
+              <div class="imagecontainer">
+              <img class="types__img rounded" src="images/sprachreise.jpg" alt="Sprachreise">
+            </div>
+              <figcaption class="figcaption">© Soner Eker</figcaption>
+            </figure>
+            <p class="types__p">
+              Tauche ein in eine neue Kultur, lerne eine Sprache vor Ort und knüpfe internationale Freundschaften! 
+              Unsere Sprachreisen bieten dir die perfekte Kombination aus Lernen und Erleben. 
+              Erweitere deine Horizonte und entdecke die Welt mit uns. Buche jetzt deine unvergessliche Sprachreise
+            </p>
+          </div>
+          </article>
+          <article class="types__article">
+            <h3>Städtereise</h3>
+            <div class="types__articlecontainer">
+            <figure class="types__figure figure">
+              <div class="imagecontainer">
+              <img class="types__img rounded" src="images/stadt.jpg" alt="Städtereise">
+            </div>
+              <figcaption class="figcaption">© Florian Weichelt</figcaption>
+            </figure>
+            <p class="types__p">Entdecke das pulsierende Herz einer faszinierenden Stadt und tauche ein in ihre Kultur, Geschichte und Vielfalt! 
+              Unsere Städtereisen bieten dir unvergessliche Erlebnisse, von ikonischen Sehenswürdigkeiten bis hin zu versteckten Geheimtipps. 
+              Buche jetzt und erlebe die Magie einer Städtereise! 
+            </p>
+          </div>
+          </article>
+        </div>
+        </article>
+        <article id="offers">
+          <h2>Angebote</h2>
+          <div class="offers__grid">
+            <div class="offer rounded">
+              <h3>14 Tage Malediven</h3>
+              <div class="offer_center">
+              <figure class="offer__figure">
+                  <img class="rounded offer__img" src="images/malediven.jpg" alt="Malediven-Angebot">
+                  <figcaption class="figcaption">© Colin Watts</figcaption>
+                <p class="offer__p rounded">1990€</p>
+                <p class="offer__caption rounded">ANGEBOT</p>
+              </figure>
+            </div>
+            <button class="button rounded send">Zum Angebot</button>
+            </div>
+            <div class="offer rounded">
+              <h3>10 Tage Portugal</h3>
+              <div class="offer_center">
+              <figure class="offer__figure figure">
+                  <img class="rounded offer__img" src="images/portugal.jpg" alt="Portugal-Angebot">
+                  <figcaption class="figcaption">© Julia Solonina</figcaption>
+                <p class="offer__p rounded">999€</p>
+                  <p class="offer__caption rounded">ANGEBOT</p>
+              </figure>
+            </div>
+            <button class="button rounded send">Zum Angebot</button>
+            </div>
+            <div class="offer rounded">
+              <h3>7 Tage Costa Rica</h3>
+              <div class="offer_center">
+              <figure class="offer__figure figure">
+                  <img class="rounded offer__img" src="images/costarica.jpg" alt="Costa Rica Angebot">
+                  <figcaption class="figcaption">© Zdeněk Macháček</figcaption>
+                <p class="offer__p rounded">2299€</p>
+                <p class="offer__caption rounded">ANGEBOT</p>
+              </figure>
+            </div>
+            <button class="button rounded send">Zum Angebot</button>
+            </div>
+            <div class="offer rounded">
+              <h3>4 Tage Tschechien</h3>
+              <div class="offer_center">
+              <figure class="offer__figure figure">
+                  <img class="rounded offer__img" src="images/tschechien.jpg" alt="Tschechien Angebot">
+                  <figcaption class="figcaption">© Mike Swigunski</figcaption>
+                <p class="offer__p rounded">269€</p>
+                <p class="offer__caption rounded">ANGEBOT</p>
+              </figure>
+            </div>
+            <button class="button rounded send">Zum Angebot</button>
+            </div>
+            <div class="offer rounded">
+              <h3>7 Tage Schweiz</h3>
+              <div class="offer_center">
+              <figure class="offer__figure figure">
+                  <img class="rounded offer__img" src="images/schweiz.jpg" alt="Schweiz Angebot">
+                  <figcaption class="figcaption">© Ricardo Gomez Angel</figcaption>
+                <p class="offer__p rounded">999€</p>
+                <p class="offer__caption rounded">ANGEBOT</p>
+              </figure>
+            </div>
+            <button class="button rounded send">Zum Angebot</button>
+            </div>
+            <div class="offer rounded">
+              <h3>9 Tage Schweden</h3>
+              <div class="offer_center">
+              <figure class="offer__figure figure">
+                  <img class="rounded offer__img" src="images/schweden.jpg" alt="Schweden Angebot">
+                  <figcaption class="figcaption">© David Becker</figcaption>
+                <p class="offer__p rounded">1699€</p>
+                <p class="offer__caption rounded">ANGEBOT</p>
+              </figure>
+            </div>
+            <button class="button rounded send">Zum Angebot</button>
+            </div>
+          </div>
+        </article>
+      <article id="about">
+        <h2>Über uns</h2>
+        <div class="articlecontent rounded row about">
+          <p class="about__p rowchild">Willkommen bei Travusion! Wir sind ein Reiseunternehmen, das von einer Gruppe von Studenten gegründet wurde. Unsere Leidenschaft für das Entdecken neuer Kulturen und unvergesslicher Abenteuer hat uns dazu inspiriert, Ihnen Reiseerlebnisse in verschiedenen Regionen der Welt anzubieten.
+            <br><br>
+            Unser Ziel ist es, Reisen anzubieten, die Ihren individuellen Vorlieben entsprechen. Entspannen Sie sich in exotischen Paradiesen, erleben Sie aufregende Abenteuer in der Natur, erkunden Sie faszinierende Städte oder verbessern Sie Ihre Sprachkenntnisse auf Sprachreisen.
+            <br><br>
+            Wir planen sorgfältig unsere Reisen und bieten qualitativ hochwertige Unterkünfte. Nachhaltigkeit und verantwortungsvolles Reisen sind uns wichtig.
+            <br><br>
+            Kontaktieren Sie uns für Ihre Traumreise!
+          </p>
+          <div class="rowchild">
+          <figure class="about__figure figure">
+            <div class="imagecontainer">
+              <img class="rounded about__img" src="images/studenten.jpg" alt="Studenten">
+              <figcaption class="figcaption">© Tim Mossholder</figcaption>
+            </div>
+          </figure>
+          </div>
+        </div>
+      </article>
+      <article id="appointment">
+        <h2>Buche eine kostenlose Beratung</h2>
+        <form action="POST" class="articlecontent rounded">
+          <fieldset class="fieldset rounded">
+            <div class="grid">
+            <div class="fieldset__question">
+              <label class="fieldset__label" for="name">Name</label>
+              <input class="fieldset__input rounded"
+                placeholder="John"
+                type="text"
+                id="name"
+                name="name"
+                required
+              >
+            </div>
+              <div class="fieldset__question">
+              <label class="fieldset__label rounded" for="email">Email</label>
+              <input class="fieldset__input rounded"
+                placeholder="john@email.com"
+                type="text"
+                id="name"
+                name="name"
+                required
+              >
+            </div>
+            <div class="fieldset__question">
+              <label class="fieldset__label" for="vacationtype">Art</label>
+              <select class="fieldset__input rounded" name="vacationtype" id="vacationtype">
+                <option>Erholen</option>
+                <option>Wandern</option>
+                <option>Abenteuer</option>
+                <option>Sprachreise</option>
+                <option>Städtereise</option>
+                <option>Noch unentschieden</option>
+              </select>
+            </div>
+          </div>
+          <textarea class="fieldset__input rounded textarea" name="comment" id="comment" placeholder="Schreib uns dein Anliegen" rows="5"></textarea>
+          </fieldset>
+          <div class="fieldset__buttoncontainer">
+            <input class="button send rounded" type="submit" id="save-appointment">
+            <input class="button cancel rounded" type="reset">
+          </div>
+          <div class="result" id="result-appointment"></div>
+        </form>
+        
+      </article>
+    </main>
+    
+  </body>
+  
+</html>

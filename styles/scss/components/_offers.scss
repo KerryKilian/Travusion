@@ -1,0 +1,49 @@
+@use "../_tools.scss" as tools;
+
+.offers__grid {
+  @include tools.grid-repeat-columns(auto-fit, 15em, 25em);
+  justify-content: center;
+  align-items: center;
+}
+
+.offer {
+    background-color: var(--main-color);
+    padding: var(--padding);
+    margin: var(--margin);
+    text-align: center;
+}
+
+.offer__figure {
+    position: relative;
+}
+
+.offer__img {
+    width: var(--img-width);
+    max-width: 100%;
+    height: var(--img-height); 
+    object-fit: cover;
+}
+
+.offer__p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--accept-color);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.offer__caption {
+    margin: 0;
+    text-align: center;
+}
+
+.offer__caption {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    background-color: var(--accept-color);
+    padding: var(--padding);
+    margin: var(--margin);
+    transform: rotate(45deg);
+}

@@ -1,0 +1,62 @@
+:root {
+  font-family: var(--font-family);
+  font-size: var(--basic-font-size);
+  line-height: 1.3;
+  background-color: var(--background-color);
+}
+
+body {
+  // no margin on smartphones
+  @media screen and (min-width: 45em) {
+    margin: var(--margin-viewport);
+  }
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: var(--fontsize-h1);
+}
+
+h2 {
+  font-size: var(--fontsize-h2);
+}
+
+h3 {
+  font-size: var(--fontsize-h3);
+}
+
+p {
+  font-size: var(--fontsize-p);
+}
+form, input, select, textarea {
+  font-size: var(--fontsize-form);
+  font-family: var(--font-family);
+}
+table {
+  font-size: var(--fontsize-table);
+}
+button, [type="submit"], [type="reset"] {
+  font-size: var(--fontsize-button);
+}
+
+nav {
+  font-size: var(--fontsize-navigation);
+}
+  
+h1, h2, h3, label, input, p, a, input, button, figcaption, form, textarea, label {
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}

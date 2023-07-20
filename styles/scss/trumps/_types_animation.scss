@@ -1,0 +1,23 @@
+// image moves up, p appears and moves down
+@media screen and (min-width: 45em) {
+    .types__figure {
+        transition: transform 0.4s ease;
+        z-index: 2;
+    }
+    
+    .types__p {
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        transform: translateY(0);
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    .types__article:hover .types__figure {
+        transform: scale(0.8) translateY(-50%);
+    }
+    
+    .types__article:hover .types__p {
+        transform: translateY(50%);
+        opacity: 1;
+    }
+}
